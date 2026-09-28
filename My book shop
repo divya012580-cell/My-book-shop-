@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Book Shop</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f2f2f2;
+            padding: 50px;
+        }
+
+        .book {
+            background: white;
+            width: 300px;
+            margin: auto;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px gray;
+        }
+
+        button {
+            background-color: green;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: darkgreen;
+        }
+
+        #success {
+            display: none;
+            margin-top: 20px;
+            color: green;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>📚 My Book Shop</h1>
+
+    <div class="book">
+        <h2>Java Programming</h2>
+        <p>Price: ₹499</p>
+
+        <button id="buyBtn">Buy Now</button>
+
+        <div id="success">
+            ✅ Book purchased successfully!
+        </div>
+    </div>
+
+    <script>
+        document.getElementById("buyBtn").addEventListener("click", function () {
+
+            // Show successful message
+            document.getElementById("success").style.display = "block";
+
+            // Close the window after 3 seconds
+            setTimeout(function () {
+                window.close();
+            }, 3000);
+        });
+    </script>
+
+</body>
+</html>
